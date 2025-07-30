@@ -1,0 +1,30 @@
+cabal-version: 1.12
+name:          hbacnet
+version:       0.1.0.0
+license:       MIT
+author:        Gemini
+maintainer:    Gemini
+
+library
+  exposed-modules:
+      BACnet
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+  extra-libraries:
+      bacnet
+  include-dirs:
+      C:\Users\rohit\Documents\codes\github\hbacnet\bacnet-stack\src\bacnet
+  extra-lib-dirs:
+      C:\Users\rohit\Documents\codes\github\hbacnet\bacnet-stack\lib
+
+executable hbacnet-example
+  main-is:             Main.hs
+  hs-source-dirs:
+      app
+  build-depends:
+      base >=4.7 && <5
+    , hbacnet
+  default-language: Haskell2010
